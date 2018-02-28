@@ -1,0 +1,293 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/footer_lodyas.png");
+}
+
+#spinnerDiv {
+  background-image: url("../img/zwartevilt_@2x.jpg");
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#header {
+  height: 15%;
+  border: solid thick black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/zwartevilt_@2x.jpg");
+}
+
+.title {
+  color: white;
+  font-size: 500%;
+  font-weight: bolder;
+  text-shadow: 0px 0px 10px #e41111;
+}
+
+.subtitle {
+  text-align: center;
+  color: white;
+  font-size: 250%;
+  font-weight: bolder;
+  text-shadow: 0px 0px 10px #e41111;
+}
+
+.subtitle2 {
+  text-align: center;
+  color: white;
+  font-size: 150%;
+  font-weight: bolder;
+  text-shadow: 0px 0px 10px #e41111;
+}
+
+#header img {
+  height: 90%;
+}
+
+#mainContainer {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+#contentContainer {
+  height: 85%;
+  width: 100%;
+}
+
+#comics {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: space-around;
+}
+
+#characters {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: space-around;
+}
+
+.comic {
+  display: flex;
+  margin-right: 5%;
+  margin-left: 5%;
+  width: 150px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.character {
+  display: flex;
+  margin-right: 5%;
+  margin-left: 5%;
+  width: 150px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.name {
+  position: relative;
+  width: 100%;
+  height: 20%;
+  top: 225px;
+  text-align: center;
+}
+
+.name a {
+  font-size: 120%;
+  color: white;
+}
+
+.details {
+  min-height: 90%;
+  width: 95%;
+  border: thick solid transparent;
+  background-image: url("../img/zwartevilt_@2x.jpg");
+  border-image: url("../img/zwartevilt_@2x.jpg") 50 round;
+  position: absolute;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  offset-inline-end: 5%;
+}
+
+.details > button {
+  width: 10%;
+  height: 10%;
+  font-size: 150%;
+  position: absolute;
+}
+
+.sinopsis {
+  font-size: 200%;
+  padding-left: 25%;
+  padding-right: 5%;
+  color: white;
+}
+
+#formDiv {
+  position: absolute;
+  left: 35%;
+  top: 45%;
+  padding-bottom: 2.5%;
+  width: 30%;
+  background-image: url("../img/footer_lodyas.png");
+  border: thick solid transparent;
+  border-image: url("../img/zwartevilt_@2x.jpg") 20 round;
+  z-index: 5;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+#form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+#formDiv label {
+  position: relative;
+  font-size: 150%;
+  color: white;
+}
+
+input {
+  font-size: 110%;
+}
+
+#formDiv > p {
+  margin: 5%;
+}
+
+#form > div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-content: center;
+}
+
+#form button {
+  font-size: 150%;
+  padding: 5px;
+}
+
+.boton {
+  position: relative;
+  bottom: 5%;
+  left: 46.5%;
+}
+
+.toggle {
+  display: flex;
+  position: relative;
+  width: 7.5rem;
+  height: 2.5rem;
+  background: white;
+  align-self: center;
+  user-select: none;
+  margin: 2rem;
+}
+
+.toggle:after {
+  content: "Comics";
+}
+
+.toggle:before {
+  content: "Chars";
+}
+
+#b {
+  display: none;
+}
+
+.toggle:after,
+.toggle:before {
+  flex: 1;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+figure {
+  position: absolute;
+  flex: 1;
+  flex-direction: column;
+  right: 0;
+  counter-increment: count;
+}
+
+figure:after {
+  font-size: 2rem;
+  opacity: .5;
+}
+
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  perspective: 1000;
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  background: limegreen;
+  transition: .4s;
+  width: 50%;
+  height: 2.5rem;
+  pointer-events: none;
+}
+
+.grow {
+  animation: grow-rev .4s 1 both;
+}
+
+#b:checked + label .grow {
+  animation: grow .4s 1 both;
+}
+
+@keyframes grow {
+  50% {
+    transform: translateX(1.875rem) scale(2);
+  }
+  to {
+    transform: translateX(3.75rem);
+  }
+}
+
+@keyframes grow-rev {
+  from {
+    transform: translateX(3.75rem);
+  }
+  50% {
+    transform: translateX(1.875rem) scale(2);
+  }
+  to {
+    transform: translateX(0rem);
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/master.css">
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery.simplePagination.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="/css/simplePagination.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <title>Votaciones Marvel</title>
+</head>
+<body>
+    <div id="spinnerDiv">
+        <img src="img/intro.gif" alt="">
+        <p class="subtitle">Cargando...</p>
+    </div>
+    <div id="mainContainer" class="">
+        <div id="header" class="">
+                <figure>
+                        <div class="toggle">
+                          <input id="b" type="checkbox" />
+                          <label for="b">
+                            <div class="card grow"></div>    
+                          </label>
+                        </div>
+                    </figure>
+            <h1 tabindex="0" class="title" aria-label="Premios Boya">Votaciones Marvel</h1><img src="https://seeklogo.com/images/M/marvel-comics-old-logo-87B4DB5E05-seeklogo.com.png" alt="Imagen del logo de marvel">
+        </div>
+        <div id="contentContainer" class="">
+            <p tabindex="0" class="subtitle">Votaciones Marvel</p>
+            <div id="comics"></div>
+            <div id="characters"></div>
+        </div>
+        <div id="formDiv">
+            <p aria-label="Rellene el formulario" class="subtitle">Rellene el formulario</p>
+            <div id="form">
+                <label aria-label="Introduzca nombre, requerido" for="nameInput">Nombre:
+                    <input type="text" id="nameInput" required="true">
+                </label></br></br>
+                <label aria-label="Introduzca email, requerido" for="emailInput">Email:
+                    <input type="text" id="emailInput" required="true">
+                </label></br></br>
+                <div>
+                    <button aria-label="Pulse enter para enviar el voto" id="submitForm">Votar</button>
+                    <button aria-label="Pulse enter para cancelar" id="cancelForm">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
